@@ -1,0 +1,12 @@
+.social-network {
+  margin-left: 4rem;
+  &__icon {
+    position: relative;
+    top: -8rem;
+    margin: 0 10px;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: $mainGrey;
+    /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 1); */
+  }
+}

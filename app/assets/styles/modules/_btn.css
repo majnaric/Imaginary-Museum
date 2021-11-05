@@ -1,0 +1,11 @@
+.btn {
+  text-decoration: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: $mainGrey;
+  font-weight: 600;
+  padding: 0.625rem;
+  border: 1px solid #333;
+  /* border-top-left-radius: 40%; */
+  box-shadow: 5px 5px 15px 1px #333;
+}
