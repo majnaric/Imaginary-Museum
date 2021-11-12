@@ -1,6 +1,5 @@
 .news-and-blog {
   position: absolute;
-  top: 45rem;
   background: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 1) 0%,
@@ -10,9 +9,22 @@
       rgba(255, 255, 255, 0) 100%
     ),
     url(https://images.unsplash.com/photo-1583306346437-f2143c0f11fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80);
-  /* border-radius: 10px; */
-  /* width: 100%; */
-  /* margin-left: 3.7rem; */
+  width: 96.5vw;
+
+  @mixin atSmall {
+    top: 96vh;
+    width: 97.7vw;
+    padding: 0;
+  }
+  /* @mixin atMedium {
+    top: 56.5rem;
+    width: 30rem;
+  } */
+
+  @mixin atLarge {
+    top: 45rem;
+    width: 96.6vw;
+  }
 }
 
 .page-section {
@@ -20,6 +32,10 @@
   text-align: center;
   position: relative;
   top: -5px;
+
+  @mixin atSmall {
+    width: 100vw;
+  }
 
   @mixin atLarge {
     position: relative;
@@ -29,17 +45,33 @@
   }
 
   &__title {
-    text-align: center;
+    /* text-align: center; */
     text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 600;
     color: #fff;
+
+    @mixin atSmall {
+      font-weight: 300;
+      font-size: 1rem;
+    }
+
+    @mixin atLarge {
+      font-size: 4rem;
+      font-weight: 600;
+    }
   }
 
   &__news {
     background-color: #31394593;
-    margin: 5.2rem;
-    margin-top: 4rem;
+
+    @mixin atSmall {
+      width: 5rem;
+      margin: 0;
+    }
+    @mixin atLarge {
+      width: 5rem;
+      margin: 5.2rem;
+      margin-top: 4rem;
+    }
   }
 
   &__news-title {
@@ -51,36 +83,72 @@
     margin: 0 auto 1rem auto;
     width: 100%;
     text-transform: uppercase;
-    font-size: 2rem;
     letter-spacing: 5px;
-    color: yellow;
+    color: #fff;
     /* opacity: 0; */
+    @mixin atSmall {
+      font-size: 1.2rem;
+    }
+    @mixin atLarge {
+      font-size: 2rem;
+    }
   }
 
   &__section-text {
     color: #fff;
     position: relative;
     float: left;
-    top: -1rem;
-    width: 68%;
     height: 3rem;
-    margin-top: 2rem;
-    margin-left: 2rem;
     text-align: justify;
     line-height: 1.5rem;
+
+    @mixin atSmall {
+      top: 17rem;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+
+    @mixin atLarge {
+      top: -1rem;
+      margin-top: 2rem;
+      margin-left: 2rem;
+      width: 68%;
+    }
   }
 
   &__expo-picture {
     border: 1px solid #fff;
     position: relative;
-    left: 25rem;
     top: -6rem;
-    height: 10rem;
-    /* padding: 5px; */
+
+    @mixin atSmall {
+      left: 0rem;
+      margin-top: 15px;
+      height: 15rem;
+      /* width: 10rem; */
+    }
+
+    @mixin atLarge {
+      margin-top: 0;
+      left: 25rem;
+      height: 10rem;
+    }
   }
 
   &__expo-picture img {
-    height: 10rem;
+    @mixin atSmall {
+      width: 20rem;
+      height: 15rem;
+      /* position: relative; */
+      /* top: 10rem; */
+      /* left: -20rem; */
+    }
+
+    @mixin atLarge {
+      height: 10rem;
+    }
   }
   /*  KADA NAPRAVIM JS ONDA NAPRAVITI DA KAD SEGMENT UDJE U EKRAN POJAVI SE I DODJE NA SVOJE MESTO. OVO JE TRANSITION DA SE POJAVI
   &__news-title:hover {
@@ -95,9 +163,17 @@
   &__expo-picture--cite {
     color: #fff;
     font-size: 0.7rem;
-    width: 48rem;
-    position: relative;
-    left: -29rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    /* position: relative;
+    left: -29rem; */
+
+    @mixin atSmall {
+      /* top: 4rem; */
+      /* left: -32rem; */
+    }
   }
 
   &-no-border {
@@ -114,24 +190,47 @@
 .events-section {
   background-color: #131b2998;
   position: relative;
-  top: 0rem;
   color: #fff;
   padding: 15px;
 
+  @mixin atSmall {
+    top: -0.3rem;
+  }
+
+  @mixin atLarge {
+    top: 2rem;
+  }
+
   &__title {
     margin: 3rem auto;
-    font-size: 3rem;
+    font-weight: 600;
     letter-spacing: 1rem;
     text-align: center;
+
+    @mixin atSmall {
+      font-size: 1.5rem;
+    }
+
+    @mixin atLarge {
+      font-size: 3rem;
+    }
   }
 
   &__card {
     border-top: 1px solid #fff;
-    height: 15rem;
-    width: 90%;
     margin: 0 auto;
     padding: 1rem;
     overflow: hidden;
+
+    @mixin atSmall {
+      height: 29rem;
+      width: 80%;
+    }
+
+    @mixin atLarge {
+      height: 15rem;
+      width: 90%;
+    }
     /* border-bottom: 1px solid #fff; */
   }
 
@@ -154,13 +253,30 @@
     background-color: $mainGrey;
     border-radius: 50%;
     float: left;
-    position: relative;
-    top: 1.5rem;
-    width: 3rem;
+
     height: 3rem;
     padding: 15px;
     font-size: 1.3rem;
-    margin: 1rem 2rem;
+
+    @mixin atSmall {
+      position: relative;
+      top: 1rem;
+      left: 39%;
+      margin: 0 auto;
+      width: 4rem;
+      height: 4rem;
+      font-size: 2rem;
+    }
+
+    @mixin atLarge {
+      position: relative;
+      top: 1.5rem;
+      left: 0;
+      margin: 1rem 2rem;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.3rem;
+    }
   }
 
   &__section-title {
@@ -178,12 +294,19 @@
   &__section-text {
     position: relative;
     float: right;
-    top: -8rem;
-    width: 68%;
     height: 3rem;
     margin-top: 2rem;
     text-align: justify;
     line-height: 1.5rem;
-    /* left: 8rem; */
+
+    @mixin atSmall {
+      top: 2rem;
+      width: 90%;
+    }
+
+    @mixin atLarge {
+      top: -8rem;
+      width: 68%;
+    }
   }
 }

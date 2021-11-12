@@ -5,6 +5,9 @@
     @mixin atSmall {
       width: 100%;
     }
+    @mixin atMedium {
+      width: 100%;
+    }
 
     @mixin atLarge {
       width: 33.33%;

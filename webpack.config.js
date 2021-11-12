@@ -3,6 +3,7 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
+    watch: true,
     entry: './app/assets/scripts/App.js',
     output: {
         filename: 'bundled.js',
@@ -12,7 +13,7 @@ module.exports = {
         static: {
             directory: path.join(__dirname,'app'),
         },
-        hot: true,
+        // hot: true,
         port: 3000,
         host: '0.0.0.0'
     },
