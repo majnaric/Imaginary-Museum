@@ -9,4 +9,5 @@
 @import "./modules/_btn";
 @import "./modules/_container";
 @import "./modules/_social-network";
-/* @import "./modules/_carousel"; */
+@import "./modules/_carousel";
+@import "./modules/_footer";
