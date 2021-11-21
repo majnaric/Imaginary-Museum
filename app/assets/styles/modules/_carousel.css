@@ -5,19 +5,29 @@ img {
 
 .carousel-container {
   box-sizing: border-box;
-  width: 90%;
-  margin: auto;
   border: 5px solid #333;
   overflow: hidden;
   position: relative;
-  top: 75rem;
+
+  @mixin atSmall {
+    width: 100vw;
+    height: 30rem;
+    border: none;
+    top: 204.8rem;
+  }
+
+  @mixin atLarge {
+    width: 90%;
+    margin: auto;
+    top: 77rem;
+  }
 }
 
 .carousel-slide {
   box-sizing: border-box;
   display: flex;
   width: 100%;
-  height: 500px;
+  height: 700px;
 }
 
 #prevBtn {
@@ -30,6 +40,7 @@ img {
   background-color: transparent;
   color: #fff;
   cursor: pointer;
+  border: none;
 }
 
 #nextBtn {
@@ -41,4 +52,5 @@ img {
   font-size: 30px;
   color: #fff;
   cursor: pointer;
+  border: none;
 }

@@ -1,4 +1,53 @@
 .row {
+  &__3 {
+    float: left;
+
+    @mixin atSmall {
+      width: 100%;
+    }
+    @mixin atMedium {
+      width: 100%;
+    }
+
+    @mixin atLarge {
+      width: 25%;
+    }
+  }
+
+  &__3--zaglavlje-input {
+    height: 10rem;
+    float: left;
+    position: relative;
+
+    @mixin atSmall {
+      top: 2rem;
+      width: 100%;
+    }
+
+    @mixin atLarge {
+      top: 1.3rem;
+      width: 25%;
+      right: 10rem;
+    }
+  }
+
+  &__3--zaglavlje-author {
+    float: left;
+    position: relative;
+
+    @mixin atSmall {
+      width: 100%;
+      font-size: 0.8rem;
+      text-align: center;
+      top: -1rem;
+    }
+
+    @mixin atLarge {
+      width: 30%;
+      right: -17rem;
+    }
+  }
+
   &__4 {
     float: left;
 

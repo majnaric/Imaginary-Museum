@@ -3,9 +3,9 @@ body {
   color: $mainGrey;
   background-color: #fff;
 
-  /* @mixin atSmall {
-    width: 122vw;
-  } */
+  @mixin atSmall {
+    /* background-color: blue; */
+  }
 }
 
 img {

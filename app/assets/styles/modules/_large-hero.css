@@ -1,13 +1,7 @@
 .large-hero-wrap {
   position: relative;
   overflow: hidden;
-  background-color: #fff;
-}
-
-.large-hero {
-  opacity: 0.6;
-  height: 100vh;
-  position: relative;
+  /* background-color: #fff;
   background: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0) 0%,
@@ -19,6 +13,20 @@
     url("/app/assets/images/hero-image-large.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100vw; */
+
+  @mixin atSmall {
+    /* width: 47rem; */
+  }
+
+  @mixin atLarge {
+    width: 98.9vw;
+  }
+}
+
+.large-hero {
+  opacity: 0.6;
+  position: relative;
 
   @mixin atSmall {
     background: linear-gradient(
@@ -32,12 +40,23 @@
       url("/app/assets/images/hero-image-small.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 97vw;
+    width: 100vw;
     height: 97vh;
   }
 
   @mixin atLarge {
-    /* height: 100vh; */
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 25%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0.3) 75%,
+        rgba(255, 255, 255, 1) 100%
+      ),
+      url("/app/assets/images/hero-image-large.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
     width: 100vw;
   }
 
@@ -57,13 +76,13 @@
     @mixin atSmall {
       width: 80%;
       /* margin: 0 auto; */
-      left: 2rem;
+      left: 2.5rem;
     }
 
     @mixin atLarge {
       width: 45rem;
       top: 10rem;
-      left: 45rem;
+      left: 39rem;
     }
   }
 
@@ -75,7 +94,7 @@
     margin-bottom: 0.5rem;
 
     @mixin atSmall {
-      font-size: 2rem;
+      font-size: 2.3rem;
     }
 
     @mixin atLarge {
@@ -88,5 +107,8 @@
     font-size: 2rem;
     font-weight: 300;
     /* text-shadow: 2px 2px 2px rgba(150, 150, 150, 1); */
+    @mixin atSmall {
+      font-size: 1.9rem;
+    }
   }
 }

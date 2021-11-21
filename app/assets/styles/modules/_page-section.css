@@ -13,16 +13,16 @@
 
   @mixin atSmall {
     top: 96vh;
-    width: 97.7vw;
+    width: 100vw;
     padding: 0;
   }
-  /* @mixin atMedium {
-    top: 56.5rem;
-    width: 30rem;
-  } */
+  @mixin atMedium {
+    width: 90%;
+    left: 5%;
+  }
 
   @mixin atLarge {
-    top: 45rem;
+    top: 50rem;
     width: 96.58vw;
   }
 }
@@ -44,6 +44,28 @@
     /* box-shadow: 5px 5px 15px 1px #333; */
   }
 
+  &__card {
+    border-top: 1px solid #fff;
+    margin: 0 auto;
+    padding: 1rem;
+    overflow: hidden;
+
+    @mixin atSmall {
+      height: 29rem;
+      width: 80%;
+    }
+
+    @mixin atMedium {
+      height: 32rem;
+    }
+
+    @mixin atLarge {
+      height: 15rem;
+      width: 90%;
+    }
+    /* border-bottom: 1px solid #fff; */
+  }
+
   &__title {
     /* text-align: center; */
     text-transform: uppercase;
@@ -52,6 +74,11 @@
     @mixin atSmall {
       font-weight: 300;
       font-size: 1rem;
+    }
+
+    @mixin atMedium {
+      font-size: 2.5rem;
+      font-weight: 600;
     }
 
     @mixin atLarge {
@@ -89,6 +116,11 @@
     @mixin atSmall {
       font-size: 1.2rem;
     }
+
+    @mixin atMedium {
+      font-size: 2rem;
+      margin-top: 1.5rem;
+    }
     @mixin atLarge {
       font-size: 2rem;
     }
@@ -110,6 +142,11 @@
       width: 100%;
     }
 
+    @mixin atMedium {
+      margin-top: 2.5rem;
+      top: 20rem;
+    }
+
     @mixin atLarge {
       top: -1rem;
       margin-top: 2rem;
@@ -119,7 +156,7 @@
   }
 
   &__expo-picture {
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
     position: relative;
     top: -6rem;
 
@@ -128,6 +165,12 @@
       margin-top: 15px;
       height: 15rem;
       /* width: 10rem; */
+    }
+
+    @mixin atMedium {
+      height: 20rem;
+      /* left: 10%; */
+      border: none;
     }
 
     @mixin atLarge {
@@ -141,9 +184,14 @@
     @mixin atSmall {
       width: 20rem;
       height: 15rem;
+      border: 1px solid #fff;
       /* position: relative; */
       /* top: 10rem; */
       /* left: -20rem; */
+    }
+    @mixin atMedium {
+      /* border: 1px solid #fff; */
+      height: 18rem;
     }
 
     @mixin atLarge {
@@ -197,6 +245,10 @@
     top: -0.3rem;
   }
 
+  @mixin atMedium {
+    /* top: 1rem; */
+  }
+
   @mixin atLarge {
     top: 2rem;
   }
@@ -209,6 +261,10 @@
 
     @mixin atSmall {
       font-size: 1.5rem;
+    }
+
+    @mixin atMedium {
+      font-size: 2.5rem;
     }
 
     @mixin atLarge {
@@ -227,11 +283,21 @@
       width: 80%;
     }
 
+    @mixin atMedium {
+      height: 32rem;
+    }
+
     @mixin atLarge {
       height: 15rem;
       width: 90%;
     }
     /* border-bottom: 1px solid #fff; */
+  }
+
+  &__card-medium {
+    @mixin atMedium {
+      height: 25rem;
+    }
   }
 
   /* &__card--blue {
@@ -245,6 +311,10 @@
   &__date-and-text {
     position: relative;
     left: -1rem;
+
+    @mixin atMedium {
+      left: 1.6rem;
+    }
   }
 
   &__date {
@@ -268,6 +338,11 @@
       font-size: 2rem;
     }
 
+    @mixin atMedium {
+      position: absolute;
+      margin: 4rem auto;
+    }
+
     @mixin atLarge {
       position: relative;
       top: 1.5rem;
@@ -289,6 +364,11 @@
     float: left;
     font-size: 1.5rem;
     letter-spacing: 5px;
+
+    @mixin atMedium {
+      position: absolute;
+      margin: 0 auto;
+    }
   }
 
   &__section-text {
@@ -302,6 +382,11 @@
     @mixin atSmall {
       top: 2rem;
       width: 90%;
+    }
+
+    @mixin atMedium {
+      position: absolute;
+      margin: 13rem auto;
     }
 
     @mixin atLarge {
