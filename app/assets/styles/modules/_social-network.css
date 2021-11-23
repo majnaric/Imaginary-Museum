@@ -1,5 +1,10 @@
 .social-network {
   margin-left: 4rem;
+
+  @mixin atMedium {
+    width: 90%;
+  }
+
   &__icon {
     position: relative;
     top: -8rem;
@@ -8,7 +13,16 @@
     font-weight: 300;
     color: $mainGrey;
     border: none;
+    margin: 0 10px;
 
-    /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 1); */
+    @mixin atMedium {
+      margin: 0 3.2rem;
+    }
+  }
+}
+
+.social-network i {
+  @mixin atMedium {
+    margin-right: 80px;
   }
 }

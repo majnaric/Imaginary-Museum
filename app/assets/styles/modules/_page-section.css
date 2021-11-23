@@ -17,8 +17,8 @@
     padding: 0;
   }
   @mixin atMedium {
-    width: 90%;
-    left: 5%;
+    width: 100%;
+    left: 0;
   }
 
   @mixin atLarge {
@@ -94,6 +94,7 @@
       width: 5rem;
       margin: 0;
     }
+
     @mixin atLarge {
       width: 5rem;
       margin: 5.2rem;

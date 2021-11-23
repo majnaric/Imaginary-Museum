@@ -1,8 +1,8 @@
 .large-hero-wrap {
   position: relative;
   overflow: hidden;
-  /* background-color: #fff;
-  background: linear-gradient(
+  background-color: #fff;
+  /* background: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 0) 25%,
@@ -79,6 +79,13 @@
       left: 2.5rem;
     }
 
+    @mixin atMedium {
+      top: 35%;
+      width: 80%;
+      position: absolute;
+      margin: 0 5%;
+    }
+
     @mixin atLarge {
       width: 45rem;
       top: 10rem;
@@ -95,6 +102,10 @@
 
     @mixin atSmall {
       font-size: 2.3rem;
+    }
+
+    @mixin atMedium {
+      font-size: 4rem;
     }
 
     @mixin atLarge {

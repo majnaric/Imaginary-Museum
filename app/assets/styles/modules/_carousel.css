@@ -16,6 +16,11 @@ img {
     top: 204.8rem;
   }
 
+  @mixin atMedium {
+    margin: 30px 0 0 0;
+    height: 50rem;
+  }
+
   @mixin atLarge {
     width: 90%;
     margin: auto;

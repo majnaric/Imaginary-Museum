@@ -14,7 +14,14 @@
   }
   &__btn-container {
     float: right;
-    margin: 10px 30px 0 20px;
+
+    @mixin atMedium {
+      display: none;
+    }
+
+    @mixin atLarge {
+      margin: 10px 30px 0 20px;
+    }
   }
   &__logo {
     position: absolute;

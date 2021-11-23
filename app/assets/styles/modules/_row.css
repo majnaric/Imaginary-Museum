@@ -63,6 +63,12 @@
     }
   }
 
+  &__4-forMedium {
+    width: 90%;
+    left: 5%;
+    margin: 30px 0 50px 0;
+  }
+
   &__5 {
     float: left;
 
@@ -87,6 +93,10 @@
     }
   }
 
+  &__6-forMedium {
+    width: 90%;
+    left: 5%;
+  }
   &__8 {
     float: left;
     @mixin atSmall {

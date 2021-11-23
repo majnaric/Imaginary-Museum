@@ -5,6 +5,10 @@
   ul {
     margin: 0;
     padding: 0;
+
+    @mixin atMedium {
+      margin: 2rem 2.5rem 0 2.5rem;
+    }
     /* @mixin clearFix; */
   }
   li {
@@ -20,5 +24,9 @@
     text-decoration: none;
     display: block;
     padding: 12px 0;
+
+    @mixin atMedium {
+      font-weight: 500;
+    }
   }
 }
