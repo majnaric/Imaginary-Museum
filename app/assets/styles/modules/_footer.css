@@ -18,19 +18,22 @@
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   @mixin atSmall {
-    top: 204.8rem;
+    top: 207rem;
     border-top: none;
+    color: #333;
   }
 
   @mixin atMedium {
+    height: 40rem;
     top: 198.5rem;
     padding-top: 2rem;
     color: #333;
   }
 
   @mixin atLarge {
-    top: 79rem;
+    top: 5rem;
     border-top: 1px solid #333;
+    height: 20rem;
   }
 
   &__container {

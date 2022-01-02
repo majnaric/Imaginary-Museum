@@ -20,6 +20,10 @@
     }
 
     @mixin atLarge {
+      display: block;
+    }
+
+    @mixin atLarge {
       margin: 10px 30px 0 20px;
     }
   }

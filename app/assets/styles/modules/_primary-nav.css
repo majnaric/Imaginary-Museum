@@ -9,6 +9,10 @@
     @mixin atMedium {
       margin: 2rem 2.5rem 0 2.5rem;
     }
+
+    @mixin atLarge {
+      margin: 0;
+    }
     /* @mixin clearFix; */
   }
   li {
@@ -20,7 +24,6 @@
   a {
     font-size: 1.4rem;
     color: #3d4754;
-    font-weight: 300;
     text-decoration: none;
     display: block;
     padding: 12px 0;
@@ -28,5 +31,12 @@
     @mixin atMedium {
       font-weight: 500;
     }
+
+    @mixin atLarge {
+      font-weight: 300;
+    }
+  }
+  a:hover {
+    color: rgb(167, 90, 17);
   }
 }

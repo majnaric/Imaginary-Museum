@@ -1,0 +1,78 @@
+.museum-logo {
+  /* position: absolute;
+  margin: -0.4rem -29rem; */
+  & h2 {
+    position: relative;
+    top: -2.2rem;
+    right: 10rem;
+  }
+}
+
+.exhibition-page {
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+  }
+  &--expo__title {
+    /* margin-top: 10rem; */
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 15px;
+  }
+
+  &__news-and-blog {
+    position: relative;
+    top: -1rem;
+    padding-top: 2rem;
+    height: 45rem;
+  }
+
+  &--expo__description {
+    padding: 5px;
+
+    & p {
+      padding: 1.5rem;
+      line-height: 1.7rem;
+      text-align: justify;
+      font-size: 1.3rem;
+    }
+  }
+
+  &--expo__photos {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 30rem;
+  }
+
+  &--expo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &--expo-image {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    transition: all 1s;
+    /* border: 1px solid #fff; */
+    -webkit-box-shadow: 5px 5px 14px 3px rgba(0, 0, 0, 0.79);
+    box-shadow: 5px 5px 14px 3px rgba(0, 0, 0, 0.79);
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &--expo-resize {
+    transform: scale(4.5);
+    /* height: 98vh;
+    width: 100vw; */
+
+    /* position: relative; */
+    object-position: left top;
+    top: 6rem;
+    z-index: 100;
+  }
+}

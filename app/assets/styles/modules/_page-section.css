@@ -9,7 +9,7 @@
       rgba(255, 255, 255, 0) 100%
     ),
     url(https://images.unsplash.com/photo-1583306346437-f2143c0f11fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80);
-  width: 96.5vw;
+  /* width: 96.5vw; */
 
   @mixin atSmall {
     top: 96vh;
@@ -23,7 +23,7 @@
 
   @mixin atLarge {
     top: 50rem;
-    width: 96.58vw;
+    width: 96.5vw;
   }
 }
 
@@ -124,6 +124,7 @@
     }
     @mixin atLarge {
       font-size: 2rem;
+      margin-top: 0;
     }
   }
 
@@ -157,26 +158,27 @@
   }
 
   &__expo-picture {
-    /* border: 1px solid #fff; */
     position: relative;
-    top: -6rem;
+    top: 0;
 
     @mixin atSmall {
       left: 0rem;
       margin-top: 15px;
       height: 15rem;
+      top: -6rem;
       /* width: 10rem; */
     }
 
     @mixin atMedium {
+      top: -6rem;
       height: 20rem;
-      /* left: 10%; */
       border: none;
     }
 
     @mixin atLarge {
+      top: 0;
       margin-top: 0;
-      left: 25rem;
+      left: 0;
       height: 10rem;
     }
   }
@@ -223,6 +225,15 @@
       /* top: 4rem; */
       /* left: -32rem; */
     }
+
+    @mixin atLarge {
+      width: 120%;
+      position: relative;
+      left: -20px;
+    }
+  }
+  &__expo-picture--cite a:visited {
+    color: #fff;
   }
 
   &-no-border {
@@ -266,10 +277,12 @@
 
     @mixin atMedium {
       font-size: 2.5rem;
+      margin-top: 2rem;
     }
 
     @mixin atLarge {
       font-size: 3rem;
+      margin-top: 0;
     }
   }
 
@@ -297,7 +310,12 @@
 
   &__card-medium {
     @mixin atMedium {
-      height: 25rem;
+      height: 23rem;
+      padding-top: 2rem;
+    }
+
+    @mixin atLarge {
+      height: 15rem;
     }
   }
 
@@ -315,6 +333,10 @@
 
     @mixin atMedium {
       left: 1.6rem;
+    }
+
+    @mixin atLarge {
+      left: -1rem;
     }
   }
 
@@ -370,6 +392,11 @@
       position: absolute;
       margin: 0 auto;
     }
+
+    @mixin atLarge {
+      position: relative;
+      margin: 1rem auto;
+    }
   }
 
   &__section-text {
@@ -391,6 +418,8 @@
     }
 
     @mixin atLarge {
+      position: relative;
+      margin: 2rem 0 0 0;
       top: -8rem;
       width: 68%;
     }

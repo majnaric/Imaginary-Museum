@@ -9,3 +9,8 @@
   /* border-top-left-radius: 40%; */
   box-shadow: 5px 5px 15px 1px #333;
 }
+
+.btn:hover {
+  background-color: rgba(167, 90, 17, 0.6);
+  color: #fff;
+}
