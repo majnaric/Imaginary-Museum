@@ -46,6 +46,9 @@
       width: 30%;
       right: -17rem;
     }
+    & p {
+      margin-top: 3rem;
+    }
   }
 
   &__4 {

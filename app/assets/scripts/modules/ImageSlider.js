@@ -1,45 +1,63 @@
+import Swiper from 'swiper';
+
+
 class ImageSlider{
     constructor(){
-        const carouselSlide = document.querySelector('.carousel-slide'); 
-        const carouselImages = document.querySelectorAll('.carousel-slide img');
-        // Buttons
-        const prevBtn = document.querySelector('#prevBtn');
-        const nextBtn = document.querySelector('#nextBtn');
-        // counter
-        let counter = 1;
-        const size = carouselImages[0].clientWidth;
 
-        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+const swiper = new Swiper(".swiper-container", {
+    speed: 900,
+    loop: true,
 
-// Button Listeners
-nextBtn.addEventListener('click', ()=>{
-if(counter >= carouselImages.length-1) return; 
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
-    counter ++;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-})
+    // If we need pagination
+    // pagination: {
+    //     el: ".swiper-pagination"
+    // },
+
+    // Navigation arrows
+    // navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev"
+    // }
+});
 
 
-prevBtn.addEventListener('click', ()=>{
-    if(counter<=0) return;
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
-    counter --;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-})
+          const images = document.getElementById("images");
+const leftButton = document.getElementById("left");
+const rightButton = document.getElementById("right");
 
-carouselSlide.addEventListener('transitionend', ()=>{
-if(carouselImages[counter].id === 'lastClone'){
-    carouselSlide.style.transition = 'none';
-    counter = carouselImages.length - 2;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-}
+const imagesList = document.querySelectorAll("#images .swiper-slide");
+let index = 0;
 
 
-if(carouselImages[counter].id === 'firstClone'){
-    carouselSlide.style.transition = 'none';
-    counter = carouselImages.length - counter;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-}
+const changeImage = (e) => {
+  
+  if (index > imagesList.length - 1) index = 0;
+  else if (index < 0) index = imagesList.length - 1;
+  images.style.transform = `translateX(${-index * images.clientWidth}px)`;
+};
+
+const run = () => {
+  index++;
+  changeImage();
+};
+
+const resetInterval = () => {
+  clearInterval(interval);
+  interval = setInterval(run, 2000);
+};
+
+let interval = setInterval(run, 2000);
+
+rightButton.addEventListener("click", () => {
+  index++;
+  changeImage();
+  resetInterval();
+});
+
+leftButton.addEventListener("click", () => {
+  index--;
+  changeImage();
+  resetInterval();
 });
 
 

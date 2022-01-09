@@ -1,21 +1,6 @@
 .zaglavlje {
-  height: 40rem;
-  position: relative;
-  background: #ada996; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #eaeaea,
-    #dbdbdb,
-    #f2f2f2,
-    #333
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #333,
-    #dbdbdb,
-    #f2f2f2,
-    #333
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* position: relative; */
+  background-color: #fff;
 
   @mixin atSmall {
     top: 207rem;
@@ -31,9 +16,8 @@
   }
 
   @mixin atLarge {
-    top: 5rem;
-    border-top: 1px solid #333;
-    height: 20rem;
+    top: 0;
+    height: 15rem;
   }
 
   &__container {

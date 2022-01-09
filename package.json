@@ -13,7 +13,8 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "swiper": "^7.4.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.7",

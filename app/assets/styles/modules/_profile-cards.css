@@ -13,7 +13,7 @@
 
   @mixin atSmall {
     flex-wrap: wrap;
-    top: 205.5rem;
+    top: 0;
   }
 
   @mixin atLarge {
@@ -25,7 +25,7 @@
   &__cards {
     display: inline-block;
     position: relative;
-    margin-top: 77rem;
+    margin-top: 6rem;
     /* margin-right: 30px; */
 
     /* margin-top: 79rem; */
@@ -38,11 +38,11 @@
 
     @mixin atSmall {
       margin-top: 1rem;
-      width: 19rem;
+      width: 21rem;
     }
 
     @mixin atLarge {
-      margin-top: 77rem;
+      margin-top: 6rem;
       width: 20%;
     }
   }

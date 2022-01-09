@@ -1,8 +1,8 @@
 import '../styles/style.css'
 import RevealOnScroll from './modules/RevealOnScroll'
-import ImageSlider from './modules/ImageSlider'
 import StickyHeader from './modules/StickyHeader'
 import ImageGallery from './modules/ImageGallery'
+import ImageSlider from './modules/ImageSlider'
 
 let imageGallery = new ImageGallery();
 let imageSlider = new ImageSlider();
